@@ -1,0 +1,334 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+body {
+    padding: 20px;
+    color: #666;
+}
+.fl{
+    float: left;
+}
+.fr {
+    float: right;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    text-align: center;
+    width: 937px;
+}
+th, td {
+    border: 1px solid #CADEFF;
+}
+th {
+    background: #e2f2ff;
+    border-top: 3px solid #a7cbff;
+    height: 30px;
+}
+td {
+    padding: 10px;
+    color: #444;
+}
+tbody tr:hover {
+    background: RGB(238,246,255);
+}
+/*购物车*/
+.checkbox {
+    width: 60px;
+}
+.goods {
+    width: 300px;
+}
+.goods span {
+    width: 180px;
+    margin-top: 20px;
+    text-align: left;
+    float: left;
+}
+.price {
+    width: 130px;
+}
+.count {
+    width: 90px;
+}
+.count .add, .count input, .count .reduce {
+    float: left;
+    margin-right: -1px;
+    position: relative;
+    z-index: 0;
+}
+.count .add, .count .reduce {
+    height: 23px;
+    width: 17px;
+    border: 1px solid #e5e5e5;
+    background: #f0f0f0;
+    text-align: center;
+    line-height: 23px;
+    color: #444;
+}
+.count .add:hover, .count .reduce:hover {
+    color: #f50;
+    z-index: 3;
+    border-color: #f60;
+    cursor: pointer;
+}
+.count input {
+    width: 50px;
+    height: 15px;
+    line-height: 15px;
+    border: 1px solid #aaa;
+    color: #343434;
+    text-align: center;
+    padding: 4px 0;
+    background-color: #fff;
+    z-index: 2;
+}
+.subtotal {
+    width: 150px;
+    color: red;
+    font-weight: bold;
+}
+.operation {
+    width: 80px;
+}
+.operation span:hover, a:hover {
+    cursor: pointer;
+    color: red;
+    text-decoration: underline;
+}
+#cartTable img {
+    width: 100px;
+    height: 80px;
+    /*border: 1px solid #ccc;*/
+    margin-right: 10px;
+    float: left;
+}
+
+.foot {
+    width: 935px;
+    margin-top: 10px;
+    color: #666;
+    height: 48px;
+    border: 1px solid #c8c8c8;
+    background-color: #eaeaea;
+    background-image:linear-gradient(RGB(241,241,241),RGB(226,226,226));
+    position: relative;
+    z-index: 8;
+}
+.foot div, .foot a {
+    line-height: 48px;
+    height: 48px;
+}
+.foot .select-all {
+    width: 100px;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 5px;
+    color: #666;
+}
+.foot .closing {
+    border-left: 1px solid #c8c8c8;
+    width: 100px;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    background: RGB(238,238,238);
+    cursor: pointer;
+}
+.foot .total{
+    margin: 0 20px;
+    cursor: pointer;
+}
+.foot  #priceTotal, .foot #selectedTotal {
+    color: red;
+    font-family: "Microsoft Yahei";
+    font-weight: bold;
+}
+.foot .selected {
+    cursor: pointer;
+}
+.foot .selected .arrow {
+    position: relative;
+    top:-3px;
+    margin-left: 3px;
+}
+.foot .selected .down {
+    position: relative;
+    top:3px;
+    display: none;
+}
+.show .selected .down {
+    display: inline;
+}
+.show .selected .up {
+    display: none;
+}
+.foot .selected:hover .arrow {
+    color: red;
+}
+.foot .selected-view {
+    width: 935px;
+    border: 1px solid #c8c8c8;
+    position: absolute;
+    height: auto;
+    background: #ffffff;
+    z-index: 9;
+    bottom: 48px;
+    left: -1px;
+    display:none;
+}
+.show .selected-view {
+    display: block;
+}
+.foot .selected-view div{
+    height: auto;
+}
+.foot .selected-view .arrow {
+    font-size: 16px;
+    line-height: 100%;
+    color:#c8c8c8;
+    position: absolute;
+    right: 330px;
+    bottom: -9px;
+}
+.foot .selected-view .arrow span {
+    color: #ffffff;
+    position: absolute;
+    left: 0px;
+    bottom: 1px;
+}
+#selectedViewList {
+    padding: 20px;
+    margin-bottom: -20px;
+}
+#selectedViewList div{
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    height: 80px;
+    border: 1px solid #ccc;
+    margin: 10px;
+}
+#selectedViewList div span {
+    display: none;
+    color: #ffffff;
+    font-size: 12px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 60px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background: RGBA(0,0,0,.5);
+    cursor: pointer;
+}
+#selectedViewList div:hover span {
+    display: block;
+}
+
+
+/**/
+.menu_ul{
+    width: 150px;
+    height: 50px;
+    border: 1px solid #000;
+}
+.menu_ul ul li{
+    float: left;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+}
+.menu_con div{
+    display: none;
+    width: 150px;
+    height: 100px;
+    border: 1px solid #000;
+}
+.bg_co{
+    background-color: red;
+    color: #ffffff;
+    border-bottom:none ;
+}
+/*五子棋*/
+#chess canvas{
+    display: block;
+    margin: 50px auto;
+    -webkit-box-shadow: -2px -2px 2px #efefef,5px 5px 5px #b9b9b9;
+    -moz-box-shadow:  -2px -2px 2px #efefef,5px 5px 5px #b9b9b9;
+    box-shadow:  -2px -2px 2px #efefef,5px 5px 5px #b9b9b9;
+    cursor: pointer;
+}
+/*红包游戏*/
+#red-envelope canvas{
+
+}
+#blur-div{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+#game-img{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    display: block;
+    vertical-align: middle;
+    filter:blur(15px) ;
+    -webkit-filter:blur(15px) ;
+    -moz-filter:blur(15px) ;
+    -ms-filter:blur(15px) ;
+    -o-filter:blur(15px) ;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+#red-envelope{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.button{
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 200;
+}
+#reset-button{
+    left: 200px;
+    bottom: 20px;
+    background-color: #058;
+    color: white;
+}
+#reset-button:hover{
+    background-color: #047;
+    text-decoration: none;
+}
+#show-button{
+    right: 200px;
+    bottom: 20px;
+    background-color: #085;
+    color: white;
+}
+#show-button:hover{
+    background-color: #074;
+    text-decoration: none;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <Meta http-equiv="Widow-target" Content="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.4, minimum-scale=1.0, maximum-scale=2.0"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>动态创建一个全功能的img元素</title>
+</head>
+<body>
+    <div class="what_ever">
+        <img src="images/4f39.jpg">
+    </div>
+<script>
+    $(document).ready(function(){
+        $('<img>',
+                {
+                    src:'images/4f35.jpg',
+                    alt:'a gold',
+                    title:'I am a good girl',
+                    click:function(){
+                        alert($(this).attr('title'));
+                    }
+                }
+
+        ).css({
+                    cursor:'pointer',
+                    border:'1px solid #000'
+                }).appendTo('.what_ever')
+    })
+</script>
+</body>
+</html>
