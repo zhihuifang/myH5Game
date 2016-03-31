@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+body {
+    padding: 20px;
+    color: #666;
+}
+.fl{
+    float: left;
+}
+.fr {
+    float: right;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    text-align: center;
+    width: 937px;
+}
+th, td {
+    border: 1px solid #CADEFF;
+}
+th {
+    background: #e2f2ff;
+    border-top: 3px solid #a7cbff;
+    height: 30px;
+}
+td {
+    padding: 10px;
+    color: #444;
+}
+tbody tr:hover {
+    background: RGB(238,246,255);
+}
+/*Îå×ÓÆå*/
+#chess canvas{
+    display: block;
+    margin: 50px auto;
+    -webkit-box-shadow: -2px -2px 2px #efefef,5px 5px 5px #b9b9b9;
+    -moz-box-shadow:  -2px -2px 2px #efefef,5px 5px 5px #b9b9b9;
+    box-shadow:  -2px -2px 2px #efefef,5px 5px 5px #b9b9b9;
+    cursor: pointer;
+}

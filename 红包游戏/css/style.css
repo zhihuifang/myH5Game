@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+body {
+    padding: 20px;
+    color: #666;
+}
+.fl{
+    float: left;
+}
+.fr {
+    float: right;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 0;
+    text-align: center;
+    width: 937px;
+}
+th, td {
+    border: 1px solid #CADEFF;
+}
+th {
+    background: #e2f2ff;
+    border-top: 3px solid #a7cbff;
+    height: 30px;
+}
+td {
+    padding: 10px;
+    color: #444;
+}
+tbody tr:hover {
+    background: RGB(238,246,255);
+}
+/*ºì°üÓÎÏ·*/
+#red-envelope canvas{
+
+}
+#blur-div{
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+#game-img{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    display: block;
+    vertical-align: middle;
+    filter:blur(15px) ;
+    -webkit-filter:blur(15px) ;
+    -moz-filter:blur(15px) ;
+    -ms-filter:blur(15px) ;
+    -o-filter:blur(15px) ;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+#red-envelope{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+.button{
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 200;
+}
+#reset-button{
+    left: 200px;
+    bottom: 20px;
+    background-color: #058;
+    color: white;
+}
+#reset-button:hover{
+    background-color: #047;
+    text-decoration: none;
+}
+#show-button{
+    right: 200px;
+    bottom: 20px;
+    background-color: #085;
+    color: white;
+}
+#show-button:hover{
+    background-color: #074;
+    text-decoration: none;
+}
