@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <Meta http-equiv="Widow-target" Content="_top">
+    <meta name="viewport"
+          content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <script type="text/javascript" src="public/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="public/js/slide.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/screening.js"></script>
+    <link href="public/css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>支付</title>
+</head>
+<body>
+<div class="index_con">
+    <div class="head_top">
+        <div class="head_line"></div>
+        <div class="index_width">
+            <div class="head_menu">
+                <ul class="top_login_text fl">
+                    <li class="b1" style="width: 40px;color: #fff">亲</li>
+                    <li>注册</li>
+                    <li>登录</li>
+                </ul>
+                <ul class="top_menu_text fr">
+                    <li>我的寻皮</li>
+                    <li>商户入住</li>
+                    <li>手机寻皮</li>
+                    <li>客户服务</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%;height: 20px" class="clearfix"></div>
+    <div class="index_width main">
+        <div class="p-header">
+            <div class="index_width">
+                <div id="logo" class="pay_logo" style="float:none;">
+                    <img src="images/logo.gif" alt="寻皮革 收银台">
+                    <span>收银台</span>
+                </div>
+            </div>
+        </div>
+        <div class="pay_main">
+            <div class="index_width">
+                <div class="order">
+                    <div class="o-left">
+                        <h3 class="o-title">
+                            订单提交成功，请您尽快付款！ 订单号：5316541+412+6
+                        </h3>
+                        <p class="o-tips">
+                            如您付款遇到问题，请及时联系网站客服人员予以解决。
+                        </p>
+                    </div>
+                    <div class="o-right">
+                        <div class="o-price">
+                            <em>应付金额</em><strong>151654164</strong><em>元</em>
+                        </div>
+                    </div>
+                    <!-- <div class="o-qrcode">
+                         <a class="oq-img">
+                             <img alt="二维码" src="images/getImageV2.jpg">
+                         </a>
+                     </div>-->
+                    <div class="clr"></div>
+                    <!--<div class="o-list j_orderList">
+                        <div class="o-list-info">
+                            <span class="mr10">收货地址：陕西省西安市灞桥区512</span>
+                            <span class="mr10">收货人：郅毛毛 </span>
+                            <span id="mobile">135****4303</span>
+                        </div>
+                    </div>-->
+                </div>
+                <div class="payment">
+                    <div style="background-color:  #ebebeb;" class="payment_y">
+                        <div class="available_balance" style="padding: 10px">
+                    <span class="p-k-check" id="available_select">
+                        <i class="checkbox-L"><em></em></i>
+                        <strong>使用余额</strong>
+                    </span>
+                        </div>
+                        <div class="available_input">
+                            <div>您当前可用余额为：<span style="color:#ff5d5b;font-weight: bold;">22222元</span>
+
+                            </div>
+                            <div class="available_number">
+                                <input type="password" class="bi-i-text" max="60" style="width:306px;"  placeholder="请输入支付密码" maxlength="25">
+                            </div>
+                            <button class="ui-button" style=" display: none; " >立即使用</button>
+                        </div>
+
+                    </div>
+
+                    <div class="clr"></div>
+                    <div class="pay-module">
+                        <ul class="pay-tabs">
+                            <li class="current selected">微信支付<i></i></li>
+                            <li class="current">支付宝支付<i></i></li>
+                            <li class="current">余额支付<i></i></li>
+                            <li class="current">网页转账<i></i></li>
+                            <li class="current">货到付款<i></i></li>
+                        </ul>
+                        <div class="many_banks">
+                            <div class="pay-detail">
+                                <ul class="bank_list">
+                                    <li style="text-align: left;">
+                                        <img src="images/wei_xin_s.jpg" /><span>(29分26秒后过期)</span>
+                                    </li>
+                                    <li class="pay_btn_m">
+                                        <dl>
+                                            <dt><img src="images/wei_xin_er.jpg"></dt>
+                                            <dd class="order_pay_money">￥26</dd>
+                                            <dd>姓名：妍女士</dd>
+                                            <dd>电话：13655225744</dd>
+                                            <dd>地址：上海市闵行沪闵路大厦70</dd>
+                                            <dd>上海市闵行沪闵路大厦7044</dd>
+                                        </dl>
+                                    </li>
+                                    <li class="clearfix"></li>
+                                    <li style="line-height: 50px; margin-top:80px;">
+                                        <a><input type="button" value="付款遇到问题" class="pro_btn" /></a>
+                                        &nbsp;&nbsp;
+                                        <a><input type="button"  value="付款完成" class="pay_sucess" id="paySuccess"/></a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<a class="btn_bank_choose_next">下一步</a>-->
+                </div>
+                <!--可用余额jq-->
+                <script type="text/javascript">
+                    var order_id = '{$order_info.order_id}';
+                    $(function(){
+                        $('#available_select').click(function(){
+                            $(".available_input").slideToggle();
+                            $(".ui-button").slideToggle();
+                            if( $(".checkbox-L").hasClass("checkbox_select")){
+                                $(".checkbox-L").removeClass("checkbox_select");
+                            }else{
+                                $(".checkbox-L").addClass("checkbox_select");
+                            }
+                        })
+                        $('#paySuccess').click(function(){
+                            window.location.href = 'user.php?act=order_detail&order_id='+order_id;
+                        });
+                    });
+
+                </script>
+                <!--可用余额jq-->
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

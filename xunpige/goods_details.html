@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <Meta http-equiv="Widow-target" Content="_top">
+    <meta name="viewport"
+          content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <script type="text/javascript" src="public/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="public/js/jquery.jqzoom.js"></script>
+    <script type="text/javascript" src="js/zoom.js"></script>
+    <!--<script type="text/javascript" src="public/js/slide.min.js"></script>-->
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/screening.js"></script>
+    <link href="public/css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/zoom.css" rel="stylesheet">
+    <title>商品列表</title>
+</head>
+<body>
+<div class="index_con">
+    <div class="head_top">
+        <div class="head_line"></div>
+        <div class="index_width">
+            <div class="head_menu">
+                <ul class="top_login_text fl">
+                    <li class="b1" style="width: 40px;color: #fff">亲</li>
+                    <li>注册</li>
+                    <li>登录</li>
+                </ul>
+                <ul class="top_menu_text fr">
+                    <li>我的寻皮</li>
+                    <li>商户入住</li>
+                    <li>手机寻皮</li>
+                    <li>客户服务</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%;height: 20px" class="clearfix"></div>
+    <div class="index_width index_search clearfix">
+        <h1 class="fl" style="padding-top: 11px"><a><img src="images/logo.gif"></a></h1>
+
+        <div class="search-form fl">
+            <div id="search-bd" class="search-bd">
+                <ul>
+                    <li class="selected">现货</li>
+                    <li>需求</li>
+                    <li>店铺</li>
+                </ul>
+            </div>
+            <div id="search-hd" class="search-hd">
+                <div class="search-bg"></div>
+                <input type="text" id="s1" class="search-input">
+                <input type="text" id="s2" class="search-input">
+                <input type="text" id="s3" class="search-input">
+                <span class="s1 pholder">现货</span>
+                <span class="s2 pholder">需求</span>
+                <span class="s3 pholder">店铺</span>
+                <button id="submit" class="btn-search" value="搜索">搜索</button>
+            </div>
+        </div>
+        <div class="require_shop fl">
+            <a href="###" class="require_btn">发布需求</a>
+            <a href="###" class="shop_btn">我的购物车 <img src="images/shop_number.png" class="shop_btn_number"> <span
+                    class="shop_btn_number" style="top: -26px;right: 24px">1</span></a>
+        </div>
+    </div>
+    <div style="width: 100%;height: 20px" class="clearfix"></div>
+    <!--详情开始-->
+    <div class="index_width">
+        <div class="company_banner">
+            <img src="images/company_banner1.jpg">
+        </div>
+        <div class="company_menu">
+            <ul class="fl">
+                <li>首页</li>
+                <li>公司介绍</li>
+                <li>供应商品</li>
+                <li>电子样册</li>
+                <li style="border: none">联系我们</li>
+            </ul>
+            <div class="join_company_number fr">
+                <img src="images/company_number_icon.png" style="margin-right: 10px">加入店铺会员
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="index_index">
+            <a href="index.html" style="font-size: 20px;border: none">首页</a>>
+            <a href="goods_details.html">商品详情</a>
+        </div>
+        <div class="detail_good">
+            <!--商品图片展示-->
+            <div class="detail_good_left fl">
+                <div class="right-extra">
+                    <!--产品参数开始-->
+                    <div>
+                        <div id="preview" class="spec-preview"><span class="jqzoom"><img jqimg="images/pi_7.jpg"
+                                                                                         src="images/pi_8.jpg"/></span>
+                        </div>
+                        <!--缩图开始-->
+                        <div class="spec-scroll"><a class="prev">&lt;</a> <a class="next">&gt;</a>
+
+                            <div class="items">
+                                <ul>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                    <li><img alt="皮" bimg="images/pi_7.jpg" src="images/pi_8.jpg"
+                                             onmousemove="preview(this);"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--缩图结束-->
+                    </div>
+
+                </div>
+                <div class="attention_goods">
+                    <span>商品货号：32141646</span>
+                    <span class="fr goods_click">关注商品</span>
+                </div>
+            </div>
+            <!--商品size选择-->
+            <div class="detail_good_center fl">
+                <div class="iteminfo_buying">
+                    <!--规格属性-->
+                    <div class="detail_good_title">
+                        都威DH169系列 小荔枝纹 25色 透气革3
+                    </div>
+                    <p class="user_way">用途：装饰家私装饰家私装饰家私</p>
+                    <div class="sys_item_spec">
+                        <dl class="clearfix iteminfo_parameter lh32">
+                            <dt>本店价格：</dt>
+                            <dd><span class="iteminfo_price">￥ <b class="sys_item_price">6.80</b></span></dd>
+                        </dl>
+                        <dl class="clearfix iteminfo_parameter iteminfo_parameter_default lh32">
+                            <dt>商品库存：</dt>
+                            <dd><span class="iteminfo_mktprice">5000<b class="sys_item_mktprice">米</b></span></dd>
+                        </dl>
+                        <dl class="clearfix iteminfo_parameter iteminfo_parameter_default lh32">
+                            <dt>商品重量：</dt>
+                            <dd><span class="iteminfo_mktprice">5000<b class="sys_item_mktprice">千克</b></span></dd>
+                        </dl>
+                        <dl class="clearfix iteminfo_parameter iteminfo_parameter_default lh32">
+                            <dt>商品品牌：</dt>
+                            <dd><span class="iteminfo_mktprice">都威</span></dd>
+                        </dl>
+                        <dl class="clearfix iteminfo_parameter iteminfo_parameter_default lh32" style="color: #b01f28">
+                            <dt>积分使用：</dt>
+                            <dd><span class="iteminfo_mktprice">最多可使用 0 积分</span></dd>
+                        </dl>
+                        <ul class="clearfix now_book_menu">
+                            <li class="b2">现货</li>
+                            <li class="b3">定制</li>
+                        </ul>
+                        <dl class="clearfix iteminfo_parameter sys_item_specpara" data-sid="2">
+                            <dt>色系：</dt>
+                            <dd>
+                                <ul class="sys_spec_text">
+                                    <li data-aid="13"><a href="javascript:;" title="灰白色系">灰白色系</a><i></i></li>
+                                    <li data-aid="14"><a href="javascript:;" title="灰白色系">灰白色系</a><i></i></li>
+                                    <li data-aid="16"><a href="javascript:;" title="灰白色系">灰白色系</a><i></i></li>
+                                    <li data-aid="17"><a href="javascript:;" title="灰白色系">灰白色系</a><i></i></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix iteminfo_parameter sys_item_specpara" data-sid="1" style="margin-top: 10px">
+                            <dt>颜色：</dt>
+                            <dd>
+                                <ul class="sys_spec_img">
+                                    <li data-aid="3">
+                                        <a href="javascript:;" title="白色">
+                                            <img src="images/pi_9.jpg" alt="白色"/>白色
+                                        </a>
+                                        <i></i>
+                                    </li>
+                                    <li data-aid="4">
+                                        <a href="javascript:;" title="粉色">
+                                         <img src="images/pi_9.jpg" alt="粉色"/>白色
+                                        </a>
+                                        <i></i>
+                                    </li>
+                                    <li data-aid="8">
+                                        <a href="javascript:;" title="蓝色">
+                                            <img src="images/pi_9.jpg" alt="蓝色"/>白色
+                                        </a>
+                                        <i></i>
+                                    </li>
+                                    <li data-aid="9">
+                                        <a href="javascript:;" title="绿色">
+                                            <img src="images/pi_9.jpg" alt="绿色"/>白色
+                                        </a><i></i>
+                                    </li>
+                                    <li data-aid="10">
+                                        <a href="javascript:;" title="黄色">
+                                            <img src="images/pi_9.jpg" alt="黄色"/>白色
+                                        </a>
+                                        <i></i>
+                                    </li>
+                                    <li data-aid="12">
+                                        <a href="javascript:;" title="灰色">
+                                            <img src="images/pi_9.jpg" alt="灰色"/>白色
+                                        </a>
+                                        <i></i>
+                                    </li>
+                                </ul>
+
+                            </dd>
+                        </dl>
+                        <dl class="cf2 d_pro_num">
+                            <dt>已选：</dt>
+                            <dd class="cf2"><span class="r fr">
+                                <a href="###" class="del_a_t">删除</a>
+                                <input type="hidden" name="selCardId" value="458">
+                                <font class="fl">
+                                    <span class="num_box h_num_box">
+                                        <!--<i class="reduce_num"></i>-->
+                                        <input type="hidden" value="458" title="4">
+                                        <input type="number" value="1" min="1" class="num_text eng" name="txtNumCount" title="0.00">
+                                        <!--<i class="add_num"></i>-->
+                                    </span>
+                                    <b class="red_text eng">¥<span>24.00</span></b>
+                                </font>
+                            </span>
+                                <span class="fl"><font>红棕4</font>
+                                    <font class="eng">
+                                        <b>¥24.00</b>
+                                    </font>
+                                    <font>
+                                        <span>1000</span>码可售</font></span>
+                            </dd>
+                        </dl>
+                        <dl class="clearfix cf2 d_pro_num">
+                            <dt></dt>
+                            <dd class="cf2"><span class="r fr">
+                                <a href="###" class="del_a_t">删除</a>
+                                <input type="hidden" name="selCardId" value="458">
+                                <font class="fl">
+                                    <span class="num_box h_num_box">
+                                        <input type="hidden" value="458" title="4">
+                                        <input type="number" value="1" min="1" class="num_text eng" name="txtNumCount" title="0.00">
+                                    </span>
+                                    <b class="red_text eng">¥<span>24.00</span></b>
+                                </font>
+                            </span>
+                                <span class="fl"><font>红棕4</font>
+                                    <font class="eng">
+                                        <b>¥24.00</b>
+                                    </font>
+                                    <font>
+                                        <span>1000</span>码可售</font></span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <!--规格属性-->
+                </div>
+                <p class="user_way" style="color: #595757">采购总量：2码，共计：<span class="price_money">¥23.00</span></p>
+                <div class="join_car">
+                    <img src="images/shop_car_img.png">
+                </div>
+            </div>
+            <!--客服等-->
+            <div class="detail_good_right fl">
+                <ul class="shop_owner">
+                    <li style="border-bottom: 1px solid #cecece;">卖家：都威皮革</li>
+                    <li>在线客服：<img src="images/ke_fu_ww.png"></li>
+                    <li>在线客服：<img src="images/ke_fu_qq.png"></li>
+                </ul>
+                <ul class="shop_address">
+                    <li>所在地址：上海上海</li>
+                    <li>联系电话：54296220</li>
+                    <li>送样次数：0</li>
+                    <li>报价次数：0</li>
+                    <li>中标次数：0</li>
+                    <li>分佣次数：0</li>
+                    <li>接订单次数：</li>
+                    <li>评价指数：<span><img src="images/heart_icon.png"><img src="images/heart_icon.png"><img src="images/heart_icon.png"></span></li>
+                </ul>
+                <a href="###" class="join_shop_btn">进入店铺</a>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="detail_evaluation">
+            <!--相关分类-->
+            <div class="detail_evaluation_left fl">
+                <h1>相关分类</h1>
+                <ul class="detail_class">
+                    <li>再生皮革</li>
+                    <li>再生皮革</li>
+                    <li>再生皮革</li>
+                    <li>再生皮革</li>
+                </ul>
+                <h1 style="border-top: 1px solid #cecece;">同类其他品牌</h1>
+                <ul class="detail_class">
+                    <li>海布锐创</li>
+                    <li>海布锐创</li>
+                    <li>海布锐创</li>
+                    <li>海布锐创</li>
+                    <li>海布锐创</li>
+                    <li>海布锐创</li>
+                    <li>海布锐创</li>
+                    <li>海布锐创</li>
+                </ul>
+            </div>
+            <!--评价等-->
+            <div class="detail_evaluation_right fl">
+                <div class="letters_list detail_evaluation_menu">
+                    <ul class="letters_list_text">
+                        <li class="current_fast"><a>商品介绍</a></li>
+                        <li><a>规格参数</a></li>
+                        <li><a>包装清单</a></li>
+                        <li><a>商品评价</a></li>
+                        <li><a>售后保障</a></li>
+                    </ul>
+                    <div class="letters_list_con">
+                        <div class="fast_letter" style="display: block;padding-top: 15px">
+                            <ul class="cf2 d_about">
+                                <li title="迷彩"><span class="hide">品名：迷彩</span></li>
+                                <li title="8127"><span class="hide">商品编码：8127</span></li>
+                                <li title="现货"><span class="hide">产品类型：现货</span></li>
+                                <li title="50码"><span class="hide">卷长：50码</span></li>
+                                <li title="湿PU"><span class="hide">工艺材质：湿PU</span></li>
+                                <li title="其它"><span class="hide">纹路名称：其它</span></li>
+                                <li title="半粘胶布"><span class="hide">底布类型：半粘胶布</span></li>
+                                <li title="0.5mm"><span class="hide">皮革厚度：0.5mm</span></li>
+                                <li title="眼镜盒"><span class="hide">皮革用途：眼镜盒</span></li>
+                                <li title="提供剪样、提供寄品"><span class="hide">其他服务：提供剪样、提供寄品</span></li>
+                            </ul>
+                        </div>
+                        <div class="fast_letter">
+                            111
+                        </div>
+                        <div class="fast_letter">
+                            2
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div style="width: 100%;height: 55px"></div>
+        <!--底部-->
+        <div class="footer">
+            <ul class="footer_ul">
+                <li>
+                    <h1>如何寻皮</h1>
+                    <span><img src="images/foot_icon_1.jpg"></span>
+
+                    <div class="footer_text">
+                        <p><a href="###">如何注册</a></p>
+
+                        <p><a href="###">如何搜索产品</a></p>
+
+                        <p><a href="###">如何购买</a></p>
+
+                        <p><a href="###">如何发布需求</a></p>
+                    </div>
+                </li>
+                <li>
+                    <h1>售后保障</h1>
+                    <span><img src="images/foot_icon_2.jpg"></span>
+
+                    <div class="footer_text">
+                        <p><a href="###">退换货原则</a></p>
+
+                        <p><a href="###">售后服务保障</a></p>
+
+                        <p><a href="###">产品质量保障</a></p>
+
+                        <p><a href="###">包装与配送</a></p>
+                    </div>
+                </li>
+                <li>
+                    <h1>关于我们</h1>
+                    <span><img src="images/foot_icon_4.jpg"></span>
+
+                    <div class="footer_text">
+                        <p><a href="###">联系方式</a></p>
+
+                        <p><a href="###">微商城</a></p>
+
+                        <p><a href="###">手机APP</a></p>
+
+                        <p><a href="###">平台介绍</a></p>
+                    </div>
+                </li>
+                <li>
+                    <h1>商家入住</h1>
+                    <span><img src="images/foot_icon_3.jpg"></span>
+
+                    <div class="footer_text">
+                        <p><a href="###">入住流程</a></p>
+
+                        <p><a href="###">合作要求</a></p>
+
+                        <p><a href="###">平台规则</a></p>
+
+                        <p><a href="###">招商简介</a></p>
+                    </div>
+                </li>
+
+                <li>
+                    <h1>开店指南</h1>
+                    <span><img src="images/foot_icon_5.jpg"></span>
+
+                    <div class="footer_text">
+                        <p><a href="###">产品详情及编辑</a></p>
+
+                        <p><a href="###">交易条款</a></p>
+
+                        <p><a href="###">商家店铺命名</a></p>
+
+                        <p><a href="###">店铺装修</a></p>
+                    </div>
+                </li>
+                <li>
+                    <h1>客服热线</h1>
+                    <span><img src="images/foot_icon_6.jpg"></span>
+
+                    <div class="footer_text">
+                        <p><a href="###">021-54296220</a></p>
+
+                        <p><a href="###">订购电话</a></p>
+
+                        <p><a href="###">如何购买</a></p>
+
+                        <p><a href="###">021-54296223</a></p>
+                    </div>
+                </li>
+            </ul>
+            <hr/>
+            <ul class="cf2 footer_last">
+                <li>
+                    <a href="###" target="_blank">免责条款</a>|
+                    <a href="###" target="_blank">隐私保护</a>|
+                    <a href="###" target="_blank">咨询热点</a>|
+                    <a href="###" target="_blank">关于我们</a>|
+                    <a href="###" target="_blank">公司简介</a>|
+                    <a href="###" target="_blank">公司动态</a>|
+                    <a href="###" target="_blank">配送方式</a>|
+                    <a href="###" target="_blank">会员注册</a>|
+                    <a href="###" target="_blank">媒体报道</a>|
+                    <a href="###" target="_blank">友情链接</a>|
+                    <a href="###" target="_blank">帮助中心</a>|
+                    <a href="###" target="_blank">支付方式</a>
+
+                    <div>
+                        2005-2016寻皮革版权所有，并保留所有权利<br>
+                        <a href="###" target="_blank">ICP备案证书号：沪ICP备15031298号-2</a><br>
+                        <img src="images/foot_icon_7.jpg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
