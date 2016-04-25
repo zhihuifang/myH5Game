@@ -8,9 +8,10 @@
     <Meta http-equiv="Widow-target" Content="_top">
     <meta name="viewport"
           content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
-    <script type="text/javascript" src="public/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="public/js/JQ/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="public/js/slide.min.js"></script>
     <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/shop_car.js"></script>
     <script type="text/javascript" src="js/add_subtract.js"></script>
     <link href="public/css/common.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -60,7 +61,7 @@
         <div class="all_store_list">
             <div class="all_store_menu b5">
                 <ul class="fl">
-                    <li><input type="checkbox"> 全选</li>
+                    <li><input type="checkbox" id="check_all"> 全选</li>
                     <li>商品名称</li>
                 </ul>
                 <ul class="fr">
@@ -82,7 +83,7 @@
                     <div class="all_goods_text">
                         <ul class="goods_text_con">
                             <li class="td">
-                                <span class="checked_goods"><input type="checkbox"></span>
+                                <span class="checked_goods"><input type="checkbox" name="items"></span>
                             </li>
                             <li class="td td-item">
                                 <div class="td-inner">
@@ -99,15 +100,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="td td-price">
-                                <em>￥156</em>
+                            <li class="td td-price td-price_n">
+                                <em>￥<span>146</span></em>
                             </li>
                             <li class="td td-amount">
                                 <div class="add_subtract Spinner"></div>
-
                             </li>
-                            <li class="td td-price td-sum">
-                                <em>￥156</em>
+                            <li class="td td-price td-sum td-sum-n">
+                                <em>￥<span>146</span></em>
                             </li>
                             <li class="td td-price td-sum td-delete">
                                 <span>删除</span>
@@ -117,7 +117,7 @@
                     <div class="all_goods_text">
                         <ul class="goods_text_con">
                             <li class="td">
-                                <span class="checked_goods"><input type="checkbox"></span>
+                                <span class="checked_goods"><input type="checkbox" name="items"></span>
                             </li>
                             <li class="td td-item">
                                 <div class="td-inner">
@@ -160,7 +160,7 @@
                     <div class="all_goods_text">
                         <ul class="goods_text_con">
                             <li class="td">
-                                <span class="checked_goods"><input type="checkbox"></span>
+                                <span class="checked_goods"><input type="checkbox" name="items"></span>
                             </li>
                             <li class="td td-item">
                                 <div class="td-inner">
@@ -195,7 +195,7 @@
                     <div class="all_goods_text">
                         <ul class="goods_text_con">
                             <li class="td">
-                                <span class="checked_goods"><input type="checkbox"></span>
+                                <span class="checked_goods"><input type="checkbox" name="items"></span>
                             </li>
                             <li class="td td-item">
                                 <div class="td-inner">
@@ -213,7 +213,7 @@
                                 </div>
                             </li>
                             <li class="td td-price">
-                                <em>￥156</em>
+                                <em>￥146</em>
                             </li>
                             <li class="td td-amount">
                                 <div class="add_subtract Spinner"></div>
@@ -232,13 +232,12 @@
             <div class="total_price">
                 <span class="fl">删除选中商品</span>
                 <div class="fr">
-                    <a href="###" class="car_num_btn"></a>
+                    <a href="submit_orders.html" class="car_num_btn"></a>
                 </div>
                 <div class="fr num_price">
                     <p>已选择<span>3</span>件商品总计（不含运费）：<span>¥85.00</span></p>
                     <p>节省：¥0.00</p>
                 </div>
-
             </div>
         </div>
     </div>

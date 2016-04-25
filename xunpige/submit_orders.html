@@ -8,7 +8,7 @@
     <Meta http-equiv="Widow-target" Content="_top">
     <meta name="viewport"
           content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
-    <script type="text/javascript" src="public/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="public/js/JQ/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="public/js/slide.min.js"></script>
     <script type="text/javascript" src="js/style.js"></script>
     <script type="text/javascript" src="js/add_subtract.js"></script>
@@ -55,11 +55,15 @@
         </div>
         <div class="clearfix"></div>
         <div class="all_shop">
-            <h1>收货地址</h1>
+            <div class="all_shop_b">
+                <h1>确认订单信息</h1>
+            </div>
+
             <div class="Caddress">
-                <!--<div class="open_new">
-                    <button class="open_btn" onclick="javascript:onclick_open();">使用新地址</button>
-                </div>-->
+                <div class="open_address">
+                    <span>选择收货地址</span>
+                    <span class="fr" style="color: red"><a>管理收货地址</a></span>
+                </div>
                 <div class="add_mi add_mi_first">
                     <p style="border-bottom:1px dashed #ccc;line-height:28px;">浙江杭州(爸爸收)</p>
                     <p>萧山 北干 明怡花苑53幢3单元 13735683918</p>
@@ -81,7 +85,267 @@
                     <p>萧山 北干 明怡花苑53幢3单元 13735683918</p>
                 </div>
             </div>
+            <div class="open_new">
+                <button class="open_btn">使用新地址</button>
+            </div>
         </div>
+        <div class="clearfix"></div>
+        <div class="all_shop">
+            <div class="all_shop_b" style="height: 10px">
+            </div>
+            <div class="Caddress">
+                <div class="open_address">
+                    <span>发票信息</span>
+                </div>
+            </div>
+            <div class="invoice_text">
+                <ul class="invoice_menu">
+                    <li class="invoice_menu_li">普通发票</li>
+                    <li>电子发票</li>
+                    <li>增值税发票</li>
+                </ul>
+                <div class="clearfix invoice_con">
+                    <div class="invoice_con_list" style="display: block">
+                        <ul>
+                            <li class="m1"><label>发票抬头：</label><input class="invoice_name" type="text"></li>
+                            <li class="m1">
+                                <label class="fl">发票内容：</label>
+                                <ul class="invoice_con_menu fl">
+                                    <li class="invoice_menu_li">人造革</li>
+                                    <li>合成革</li>
+                                    <li>PU革</li>
+                                    <li>PVC革</li>
+                                </ul>
+                            </li>
+                            <li class="m1">
+                                <a href="###" class="save_btn">保存发票信息</a>
+                                <a href="###" class="save_btn">取消</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="invoice_con_list">
+                        <ul>
+                            <li class="m1"><label>发票抬头2：</label><input class="invoice_name" type="text"></li>
+                            <li class="m1">
+                                <label class="fl">发票内容：</label>
+                                <ul class="invoice_con_menu fl">
+                                    <li class="invoice_menu_li">人造革</li>
+                                    <li>合成革</li>
+                                    <li>PU革</li>
+                                    <li>PVC革</li>
+                                </ul>
+                            </li>
+                            <li class="m1">
+                                <a href="###" class="save_btn">保存发票信息</a>
+                                <a href="###" class="save_btn">取消</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+        <div class="all_store_list">
+            <div class="all_store_menu b5">
+                <ul class="fr">
+                    <li>本店价</li>
+                    <li>购买数量</li>
+                    <li>小计</li>
+                </ul>
+            </div>
+            <!--商店以及商品列表-->
+            <div class="all_goods_list">
+                <div class="all_goods_con clearfix">
+                    <div class="all_store_name">
+                        <ul>
+                            <li class="b2">grfgggg</li>
+                            <li>进入店铺 &gt;&gt;</li>
+                        </ul>
+                    </div>
+                    <div class="clearfix all_goods_text">
+                        <ul class="goods_text_con">
+                            <li class="fl td-item">
+                                <div class="td-inner">
+                                    <div class="item-pic">
+                                        <a><img src="images/pi_10.png"></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-basic-info">
+                                            <a class="item-title">瑞天RT-629 头层黄牛皮 小荔枝纹 珠光 单色 沙</a>
+                                        </div>
+                                        <div class="item-in-info">
+                                            <a class="item-title">座套革 箱包革 背景墙软包用革</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fr td-price" style="text-align: center;width: 167px">
+                                <em>￥156</em>
+                            </li>
+                            <li class="fr td-amount" style="width: 126px">
+                                <div class="add_subtract Spinner" style="margin-top: 31px">32132</div>
+                            </li>
+                            <li class="fr td-price td-sum" style="text-align: left;width: 164px">
+                                <em>￥156</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix all_goods_text">
+                        <ul class="goods_text_con">
+                            <li class="fl td-item">
+                                <div class="td-inner">
+                                    <div class="item-pic">
+                                        <a><img src="images/pi_10.png"></a>
+                                    </div>
+                                    <div class="item-info">
+                                        <div class="item-basic-info">
+                                            <a class="item-title">瑞天RT-629 头层黄牛皮 小荔枝纹 珠光 单色 沙</a>
+                                        </div>
+                                        <div class="item-in-info">
+                                            <a class="item-title">座套革 箱包革 背景墙软包用革</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="fr td-price" style="text-align: center;width: 167px">
+                                <em>￥156</em>
+                            </li>
+                            <li class="fr td-amount" style="width: 126px">
+                                <div class="add_subtract Spinner" style="margin-top: 31px">32132</div>
+                            </li>
+                            <li class="fr td-price td-sum" style="text-align: left;width: 164px">
+                                <em>￥156</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <label>买家留言：</label>
+                        <input type="text" class="buy_message">
+                    </div>
+                </div>
+            </div>
+            <div class="total_price">
+                <div class="fr">
+                    <span class="pay_money">实付款：<span class="pay_money_number">￥555</span></span>
+                    <a href="order_pay.html" class="pay_num_btn"></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div style="width: 100%;height: 55px"></div>
+    <!--底部-->
+    <div class="footer">
+        <ul class="footer_ul">
+            <li>
+                <h1>如何寻皮</h1>
+                <span><img src="images/foot_icon_1.jpg"></span>
+
+                <div class="footer_text">
+                    <p><a href="###">如何注册</a></p>
+
+                    <p><a href="###">如何搜索产品</a></p>
+
+                    <p><a href="###">如何购买</a></p>
+
+                    <p><a href="###">如何发布需求</a></p>
+                </div>
+            </li>
+            <li>
+                <h1>售后保障</h1>
+                <span><img src="images/foot_icon_2.jpg"></span>
+
+                <div class="footer_text">
+                    <p><a href="###">退换货原则</a></p>
+
+                    <p><a href="###">售后服务保障</a></p>
+
+                    <p><a href="###">产品质量保障</a></p>
+
+                    <p><a href="###">包装与配送</a></p>
+                </div>
+            </li>
+            <li>
+                <h1>关于我们</h1>
+                <span><img src="images/foot_icon_4.jpg"></span>
+
+                <div class="footer_text">
+                    <p><a href="###">联系方式</a></p>
+
+                    <p><a href="###">微商城</a></p>
+
+                    <p><a href="###">手机APP</a></p>
+
+                    <p><a href="###">平台介绍</a></p>
+                </div>
+            </li>
+            <li>
+                <h1>商家入住</h1>
+                <span><img src="images/foot_icon_3.jpg"></span>
+
+                <div class="footer_text">
+                    <p><a href="###">入住流程</a></p>
+
+                    <p><a href="###">合作要求</a></p>
+
+                    <p><a href="###">平台规则</a></p>
+
+                    <p><a href="###">招商简介</a></p>
+                </div>
+            </li>
+
+            <li>
+                <h1>开店指南</h1>
+                <span><img src="images/foot_icon_5.jpg"></span>
+
+                <div class="footer_text">
+                    <p><a href="###">产品详情及编辑</a></p>
+
+                    <p><a href="###">交易条款</a></p>
+
+                    <p><a href="###">商家店铺命名</a></p>
+
+                    <p><a href="###">店铺装修</a></p>
+                </div>
+            </li>
+            <li>
+                <h1>客服热线</h1>
+                <span><img src="images/foot_icon_6.jpg"></span>
+
+                <div class="footer_text">
+                    <p><a href="###">021-54296220</a></p>
+
+                    <p><a href="###">订购电话</a></p>
+
+                    <p><a href="###">如何购买</a></p>
+
+                    <p><a href="###">021-54296223</a></p>
+                </div>
+            </li>
+        </ul>
+        <hr/>
+        <ul class="cf2 footer_last">
+            <li>
+                <a href="###" target="_blank">免责条款</a>|
+                <a href="###" target="_blank">隐私保护</a>|
+                <a href="###" target="_blank">咨询热点</a>|
+                <a href="###" target="_blank">关于我们</a>|
+                <a href="###" target="_blank">公司简介</a>|
+                <a href="###" target="_blank">公司动态</a>|
+                <a href="###" target="_blank">配送方式</a>|
+                <a href="###" target="_blank">会员注册</a>|
+                <a href="###" target="_blank">媒体报道</a>|
+                <a href="###" target="_blank">友情链接</a>|
+                <a href="###" target="_blank">帮助中心</a>|
+                <a href="###" target="_blank">支付方式</a>
+
+                <div>
+                    2005-2016寻皮革版权所有，并保留所有权利<br>
+                    <a href="###" target="_blank">ICP备案证书号：沪ICP备15031298号-2</a><br>
+                    <img src="images/foot_icon_7.jpg">
+                </div>
+            </li>
+        </ul>
     </div>
 </div>
 </body>

@@ -1,0 +1,32 @@
+.webuploader-container {
+	position: relative;
+}
+.webuploader-element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px,1px,1px,1px);
+}
+.webuploader-pick {
+	overflow: hidden;
+	position: relative;
+	display: inline-block;
+	margin-right: 25px;
+	float: left;
+	width: 90px;
+	height: 90px;
+	border: 2px solid #e4393c;
+	border-radius: 5px;
+	-moz-border-radius: 5px; /* 老的 Firefox */
+	-webkit-border-radius: 5px; /* Chrome, Safari 3.1+ */
+	-ms-border-radius: 5px; /* IE 9 */
+	-o-border-radius: 5px; /* Opera 10.50-12.00 */
+}
+.webuploader-pick-hover {
+	/*background: #00a2d4;*/
+}
+
+.webuploader-pick-disable {
+	opacity: 0.6;
+	pointer-events:none;
+}
+

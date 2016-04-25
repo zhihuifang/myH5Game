@@ -140,4 +140,13 @@ $(function () {
     $('.Caddress .add_mi').click(function() {
         $(this).addClass('add_mi_first').siblings('.add_mi').removeClass('add_mi_first')
     })
+    /*发票内容选择*/
+    $('.invoice_con_menu li').click(function () {
+        $(this).addClass('invoice_menu_li').siblings().removeClass('invoice_menu_li');
+    });
+    /*发票切换*/
+    $('.invoice_menu li').click(function () {
+        $('.invoice_menu li').eq($(this).index()).addClass('invoice_menu_li').siblings().removeClass('invoice_menu_li');
+        $('.invoice_con').children('.invoice_con_list').eq($(this).index()).show().siblings().hide();
+    });
 });

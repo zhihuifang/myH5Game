@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <Meta http-equiv="Widow-target" Content="_top">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <script type="text/javascript" src="public/js/JQ/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="public/js/slide.min.js"></script>
+    <script type="text/javascript" src="public/js/date/laydate.dev.js"></script>
+    <script type="text/javascript" src="public/js/webuploader.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/css/webuploader.css">
+    <script type="text/javascript" src="js/style.js"></script>
+    <link href="public/css/common.css" rel="stylesheet">
+    <link href="public/css/slide.css" rel="stylesheet">
+    <link href="public/css/date.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/user_center.css" rel="stylesheet">
+    <link href="css/demand.css" rel="stylesheet">
+    <title>发布需求</title>
+</head>
+<body>
+<div class="index_con">
+    <div class="head_line"></div>
+    <div class="index_width">
+        <div class="center_top">
+            <img src="images/logo.gif">
+            <span class="center_top_text">发布需求</span>
+            <span class="fr center_top_login"><a href="index.html">返回首页</a></span>
+        </div>
+    </div>
+    <div class="on_line"></div>
+    <div class="index_width">
+        <!--在这里写发布需求表单 start -->
+        <div class="demand_aggregate ">
+            <div class="demand_aggregate_l">
+                <div class="demand_aggregate_left">
+                    <form action="">
+                        <p style="color: #000000;font-size:18px;">添加样图：</p>
+                        <div class="upload_pictures" id="uploader-demo">
+                            <div id="fileList" class="uploader-list">
+                                <img src="images/delete_demand.png" alt="寻皮革" style="position:absolute;top: 0; right: 0">
+                            </div>
+                            <!--<div><img src="themes/xpg/images/delete_demand.png" alt="寻皮革" style="position:absolute;top: 0; right: 0"></div>-->
+                            <div id="filePicker" style="text-align: center;float: left">
+                                <img src="images/demand_add.png" alt="寻皮革" style="padding-top: 15px">
+                            </div>
+                            <div class="clearfix"></div>
+                            <div style="color: #808080;font-size: 15px;padding-top: 10px">选择电脑图片上传</div>
+                            <div class="clearfix"></div>
+                            <script type="text/javascript">
+                                // 图片上传demo
+                                jQuery(function() {
+                                    var $ = jQuery,
+                                            $list = $('#fileList'),
+                                    // 优化retina, 在retina下这个值是2
+                                            ratio = window.devicePixelRatio || 1,
+
+                                    // 缩略图大小
+                                            thumbnailWidth = 100 * ratio,
+                                            thumbnailHeight = 100 * ratio,
+
+                                    // Web Uploader实例
+                                            uploader;
+
+                                    // 初始化Web Uploader
+                                    uploader = WebUploader.create({
+
+                                        // 自动上传。
+                                        auto: false,
+
+                                        // swf文件路径
+                                        swf: '/js/Uploader.swf',
+
+                                        // 文件接收服务端。
+                                        server: 'http://webuploader.duapp.com/server/fileupload.php',
+
+                                        // 选择文件的按钮。可选。
+                                        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                                        pick: '#filePicker',
+                                        fileNumLimit:3,
+                                        // 只允许选择文件，可选。
+                                        accept: {
+                                            title: 'Images',
+                                            extensions: 'gif,jpg,jpeg,bmp,png',
+                                            mimeTypes: 'image/*'
+                                        }
+                                    });
+
+                                    // 当有文件添加进来的时候
+                                    uploader.on( 'fileQueued', function( file ) {
+                                        var $li = $(
+                                                        '<div id="' + file.id + '" class="file-item thumbnail">' +
+                                                        '<img>' +
+                                                        '</div>'
+                                                ),
+                                                $img = $li.find('img');
+                                        $list.append( $li );
+                                        $('<img class="cancel" style="width: 12px;height: 12px" src="images/delete_demand.png">') .appendTo( $li );
+
+                                        // 创建缩略图
+                                        uploader.makeThumb( file, function( error, src ) {
+                                            if ( error ) {
+                                                $img.replaceWith('<span>不能预览</span>');
+                                                return;
+                                            }
+
+                                            $img.attr( 'src', src );
+                                        }, thumbnailWidth, thumbnailHeight );
+                                        $(".cancel").click(function() {
+                                            $(this).parent().remove();
+                                        });
+                                    });
+
+                                    // 文件上传过程中创建进度条实时显示。
+                                    uploader.on( 'uploadProgress', function( file, percentage ) {
+                                        var $li = $( '#'+file.id ),
+                                                $percent = $li.find('.progress span');
+
+                                        // 避免重复创建
+                                        if ( !$percent.length ) {
+                                            $percent = $('<p class="progress"><span></span></p>')
+                                                    .appendTo( $li )
+                                                    .find('span');
+                                        }
+
+                                        $percent.css( 'width', percentage * 100 + '%' );
+                                    });
+
+                                    // 文件上传成功，给item添加成功class, 用样式标记上传成功。
+                                    uploader.on( 'uploadSuccess', function( file ) {
+                                        $( '#'+file.id ).addClass('upload-state-done');
+                                    });
+
+                                    // 文件上传失败，现实上传出错。
+                                    uploader.on( 'uploadError', function( file ) {
+                                        var $li = $( '#'+file.id ),
+                                                $error = $li.find('div.error');
+
+                                        // 避免重复创建
+                                        /* if ( !$error.length ) {
+                                         $error = $('<div class="error"></div>').appendTo( $li );
+                                         }*/
+
+                                        $error.text('上传失败');
+                                    });
+
+                                    // 完成上传完了，成功或者失败，先删除进度条。
+                                    uploader.on( 'uploadComplete', function( file ) {
+                                        $( '#'+file.id ).find('.progress').remove();
+                                    });
+                                });
+                            </script>
+                        </div>
+                        <div class="demand_list demand_top">
+                            <label> 产品分类：</label>
+                            <select>
+                                <option>人造皮革</option>
+                            </select>
+                            <p class="choose_1">请选择分类</p>
+                        </div>
+                        <div class="demand_list demand_top">
+                            <label> 需求名称：</label>
+                            <input  placeholder="输入型号+色系+用途" name="name_demand" id="choose_2" />
+                            <p class="input_1">请输入需求</p>
+                        </div>
+                        <div class="demand_list demand_top">
+                            <label> 需求数量：</label>
+                            <input style="width: 323px;margin-right: 0" placeholder="输入数量" id="choose_3"/>
+                            <select style="width: 86px;padding-left: 30px;margin-left: 0">
+                                <option>米</option>
+                                <option>米</option>
+                            </select>
+                            <p class="input_2">请输入数量</p>
+                        </div>
+                        <div class="demand_list demand_top" style="position: relative">
+                            <label> 到期时间：</label>
+                            <input  type="text" id="J-xl-2" style="width: 377px" disabled />
+                            <input style="position:absolute;top: -1px;width: 36px;height: 36px; background:url(images/sanjiao_01_03.png) no-repeat center;cursor:pointer; outline: none;" type="button" id="J-xl-2-btn" value="">
+                            <script type="text/javascript">
+                                document.getElementById('J-xl-2-btn').onclick = function(){
+                                    laydate({
+                                        elem: '#J-xl-2'
+                                    });
+                                }
+                            </script>
+                            <p class="input_3">请选择时间</p>
+                        </div>
+                        <div class="demand_list demand_top">
+                            <label> 联 系 人：</label>
+                            <input placeholder="如：王先生，李女士" id="choose_4" />
+                            <p class="input_4">请输入联系人</p>
+                        </div>
+                        <div class="demand_list demand_top">
+                            <label> 联系方式：</label>
+                            <input   placeholder="输入手机号或座机号" id="choose_5" />
+                            <p class="input_5">请输入联系方式</p>
+                        </div>
+                        <div class="demand_list demand_top" style="position: relative;height: 161px">
+                            <label> 需求备注：</label>
+                            <textarea style="color: #333333;position: absolute;top: -2px;width: 417px;height: 155px">输入其他重要需求信息</textarea>
+                        </div>
+                        <img src="images/button_fabu.png" alt="寻皮革" style="margin: 45px 0 0 90px" onClick="check()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

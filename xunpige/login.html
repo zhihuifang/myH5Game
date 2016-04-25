@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
+    <Meta http-equiv="Widow-target" Content="_top">
+    <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <script type="text/javascript" src="public/js/JQ/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="public/js/validform/Validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="public/js/slide.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <script type="text/javascript" src="js/screening.js"></script>
+    <link href="public/css/common.css" rel="stylesheet">
+    <link href="css/vaildform/demo.css" rel="stylesheet">
+    <link href="css/vaildform/style.css" rel="stylesheet">
+    <link href="public/css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/user_center.css" rel="stylesheet">
+    <title>登录</title>
+</head>
+<body>
+<div class="index_con">
+    <div class="center_con">
+        <div class="head_line"></div>
+        <div class="index_width">
+            <div class="center_top">
+                <img src="images/logo.gif">
+                <span class="center_top_text">欢迎登录</span>
+                <ul class="back_index fr">
+                    <li><i></i> <a href="index.html">回到首页</a></li>
+                    <li><i style="background-position: -127px -3px ;"></i> <a>注册</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="on_line"></div>
+        <div class="index_width">
+            <div class="login">
+               <form class="registerform" method="post" action="demo/ajax_post.php">
+                   <div class="login_left fl">
+                       <img src="images/login_p.jpg">
+                   </div>
+                   <div class="login_right fr">
+                       <p><span class="members_text">寻皮革网会员</span><span class="fr">立即注册</span></p>
+                       <p style="margin-top: 30px;position: relative;">
+                           <span class="u_logo"></span>
+                           <input class="ipt" type="text" placeholder="请输入用户名或邮箱" id="user_name" value="" name="name" datatype="s6-18" errormsg="昵称至少6个字符,最多18个字符！">
+                       </p>
+                       <div class="Validform_checktip"></div>
+                       <p style="position: relative;margin-top: 30px;">
+                           <span class="p_logo"></span>
+                           <input id="password" class="ipt" type="password" placeholder="请输入密码" value="" name="userpassword" datatype="*6-20" nullmsg="请填写密码！">
+                           <div class="Validform_checktip"></div>
+                       </p>
+                       <p style="margin-top: 25px">
+                           <input id="" class="yan_number" type="text" placeholder="验证码">
+                           <span class="yan_img"><img src="images/login_yan.gif"></span>
+                           <span>换一张</span>
+                       </p>
+                       <p style="margin-top: 25px" class="clearfix">
+                           <span class="fl mind_number"><input type="checkbox"> 记住密码</span>
+                           <span class="fr">忘记密码？</span>
+                       </p>
+                       <p style="margin-top: 45px">
+                           <input type="submit" value="登录" class="login_btn">
+                       </p>
+                   </div>
+               </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!--底部-->
+        <div class=" clearfix footer" style="margin-top: 115px">
+            <hr/>
+            <ul class="cf2 footer_last">
+                <li>
+                    <a href="###" target="_blank">免责条款</a>|
+                    <a href="###" target="_blank">隐私保护</a>|
+                    <a href="###" target="_blank">咨询热点</a>|
+                    <a href="###" target="_blank">关于我们</a>|
+                    <a href="###" target="_blank">公司简介</a>|
+                    <a href="###" target="_blank">公司动态</a>|
+                    <a href="###" target="_blank">配送方式</a>|
+                    <a href="###" target="_blank">会员注册</a>|
+                    <a href="###" target="_blank">媒体报道</a>|
+                    <a href="###" target="_blank">友情链接</a>|
+                    <a href="###" target="_blank">帮助中心</a>|
+                    <a href="###" target="_blank">支付方式</a>
+
+                    <div>
+                        2005-2016寻皮革版权所有，并保留所有权利<br>
+                        <a href="###" target="_blank">ICP备案证书号：沪ICP备15031298号-2</a><br>
+                        <img src="images/foot_icon_7.jpg">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            //$(".registerform").Validform();  //就这一行代码！;
+
+            $(".registerform").Validform({
+                tiptype:2
+            });
+        })
+    </script>
+</div>
+</body>
+</html>
