@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <Meta http-equiv="Widow-target" Content="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.4, minimum-scale=1.0, maximum-scale=2.0"/>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>angular-1</title>
+</head>
+<body>
+    <div ng-app="">
+        <fieldset>
+            <legend>第一个例子</legend>
+            <table>
+                <tr>
+                    <td>单价</td>
+                    <td>数量</td>
+                </tr>
+                <tr>
+                    <td><input type="number" ng-model="single" required min="0"></td>
+                    <td><input type="number" ng-model="single_n" required min="1"></td>
+                </tr>
+            </table>
+            <b>金额：</b><span>{{single * single_n | currency}}</span>
+        </fieldset>
+
+        <fieldset>
+            <legend>第二个例子</legend>
+            <b>改变model来控制dom</b>
+            <div><input type="text" ng-model="data.msg" required></div>
+            <div class="{{data.msg}}">我是一个{{data.msg}}</div>
+        </fieldset>
+    </div>
+</body>
+</html>

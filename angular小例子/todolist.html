@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="todoList">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <Meta http-equiv="Widow-target" Content="_top">
+    <meta name="viewport" content="width=device-width, initial-scale=1.4, minimum-scale=1.0, maximum-scale=2.0"/>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/style.js"></script>
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>TODOlist</title>
+</head>
+<body ng-controller="taskCtrl">
+    <div class="input-group">
+        <input class="form-control" ng-model="task" type="text">
+        <span class="input-group-btn">
+            <button class="btn btn-default" ng-click="add()">提交</button>
+        </span>
+    </div>
+    <h4 ng-hide="tasks.length==0">任务列表</h4>
+    <h4 ng-if="tasks.length>0">任务列表</h4>
+    <ul class="list-group">
+        <li ng-repeat="item in tasks track by $index" class="list-group-item">{{item}} <a ng-click="tasks.splice($index,1)">删除</a></li>
+    </ul>
+</body>
+<script type="text/javascript">
+    angular.module('todoList',[])
+            .controller('taskCtrl',function($scope){
+                $scope.task='';
+                $scope.tasks=[];
+                $scope.add=function(){
+                    $scope.tasks.push($scope.task);
+                }
+            })
+</script>
+</html>
