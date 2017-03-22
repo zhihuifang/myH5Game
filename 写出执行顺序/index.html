@@ -9,20 +9,13 @@
     <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" src="js/style.js"></script>
-    <link href="css/common.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <title>红包游戏</title>
+ <!--   <link href="css/common.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">-->
+    <title>执行顺序</title>
 </head>
 <body>
-   <div id="blur-div">
-        <img src="images/红包游戏.jpg" id="game-img">
-        <canvas id="red-envelope">
-
-        </canvas>
-       <a href="###" class="button" id="reset-button">RESET</a>
-       <a href="###"  class="button" id="show-button">SHOW</a>
-   </div>
 <script>
+    /*c*/
     function a(fn){
         alert(this);
         var b=fn();
@@ -34,6 +27,7 @@
         alert(this);
     }
     document.body.onclick=a(fn);
+    /*b*/
  /*   alert(x);
     for(var i=0;i<5;i++){
         var x=0;
@@ -42,6 +36,7 @@
         },100)
     }
     alert(x)*/
+    /*a*/
 /*function show(fn){
     var a=fn();
     alert(a);

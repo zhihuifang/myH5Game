@@ -4,26 +4,19 @@
     <meta charset="UTF-8">
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
-    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE"/>
     <Meta http-equiv="Widow-target" Content="_top">
     <meta name="viewport" content="width=device-width, initial-scale=1.4, minimum-scale=1.0, maximum-scale=2.0"/>
     <script type="text/javascript" src="js/angular.min.js"></script>
     <script type="text/javascript" src="js/style.js"></script>
     <link href="css/common.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <title>angular-1</title>
+    <title></title>
 </head>
 <body>
-    <div ng-app="">
-
-        <p>name
-            <input type="text" ng-model="user.name">
-        </p>
-        <h1>hello:{{user.name}}</h1>
-        <h3>绑定html元素到应用程序数据</h3>
-        <div ng-init="firstName='jone'"></div>
-        <p>姓名为：<span ng-bind="firstName"></span></p>
-    </div>
-
+<div ng-app>
+    <h3>计算机显示下列两个数值的和</h3>
+    1.98+2.98={{1.98+2.98 | number : 0}}
+</div>
 </body>
 </html>
