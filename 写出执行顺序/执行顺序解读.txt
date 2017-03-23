@@ -1,0 +1,3 @@
+a）、从show(fn)()开始运行函数，
+var a = fn();有三层意思：1、运行fn（）函数，2、获得fn（）返回值，3、将返回值赋给a；所以第一个alert是返回值a，第二个因为a未被定义alert（undefined）
+随后返回一个无名函数，执行无名函数，alert字符串b，最后执行alert（），因为无名函数未被定义所以alert（undefined）；
