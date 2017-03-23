@@ -1,3 +1,12 @@
 a）、从show(fn)()开始运行函数，
 var a = fn();有三层意思：1、运行fn（）函数，2、获得fn（）返回值，3、将返回值赋给a；所以第一个alert是返回值a，第二个因为a未被定义alert（undefined）
 随后返回一个无名函数，执行无名函数，alert字符串b，最后执行alert（），因为无名函数未被定义所以alert（undefined）；
+
+b)、1、alert（x）因为x没有被赋值定义所以alert出undefined    
+    2、for有延时所以会先弹出最后一个alert（x）为0；
+    3、for循环5次，因为有settimeout延时100毫秒，这时候for已经循环完毕，所以alert5个5；
+
+c）、1、alert（this），this默认的function的对象是Window，alert出[object window]
+     2、var b =fn();(1)、运行fn（）函数，(2)、获得fn（）返回值，(3)、将返回值赋给b；所以运行fn（）this与第一个相同alert出[object window]
+     3、document.body.onclick=a(fn),点击body会执行a函数并传递fn参数，得到一个对象集合alert出object HtmlBodyElement
+     
