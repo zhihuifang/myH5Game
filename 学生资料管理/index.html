@@ -20,7 +20,7 @@
         var sumAge=0;
         for(var i =0;i<grade3.length;i++){
             console.log(grade3[i].name+',');
-           /* if(!(grade3[i].age)=='张三')
+           /* if(!(grade3[i].name)=='张三')
             {
                 sumAge+=grade3[i].age;
             }*/
@@ -30,5 +30,33 @@
         console.log(sumAge);
 
     }
+
+    var mySingleton = (function() {
+
+        var privateVar = '';
+
+        var instance = {
+
+            publicMethod1 : publicMethod1,
+
+            publicMethod2 : publicMethod2
+
+        };
+
+        return instance;
+
+        function publicMethod1 () {
+
+        };
+
+        function publicMethod2() {
+
+        };
+
+        function privateMethod () {
+
+        }
+
+    })();
 </script>
 </html>
