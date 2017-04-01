@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>学生资料管理</title>
+</head>
+<body>
+<button onclick="StudentManage()">点击我，看控制台</button>
+</body>
+<script type="text/javascript">
+    function StudentManage() {
+        var people ={name:'张三',age:20};
+        var grade3 = [];
+        grade3.push(people);
+        var liSi = {name:'李四',age:21};
+        var wW = {name: '王五', age:22};
+        grade3.push(liSi);
+        grade3.push(wW);
+        console.log(grade3.length);
+        var sumAge=0;
+        for(var i =0;i<grade3.length;i++){
+            console.log(grade3[i].name+',');
+           /* if(!(grade3[i].age)=='张三')
+            {
+                sumAge+=grade3[i].age;
+            }*/
+            sumAge+=grade3[i].age;
+
+        }
+        console.log(sumAge);
+
+    }
+</script>
+</html>
