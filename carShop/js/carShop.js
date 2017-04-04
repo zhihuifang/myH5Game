@@ -2,26 +2,36 @@
  * Created by Administrator on 2017/4/1.
  */
 var carShop = (function(){
+    var goods = [],
+        prices = {
+            'æµ·å°”60': 3000,
+            'é•¿è™¹æ»šç­’': 1000,
+            'åä¸ºè£è€€9': 2000
+        };
+
     var carShopReturn = {
+        totalAmount: 0,
         TotalNumber:TotalNumber,
         TotalPrice:TotalPrice,
+        add: add,
         AddSub:AddSub,
         GoodsDetails:GoodsDetails
     };
+
     return carShopReturn;
 
-    /*ÉÌÆ·×Ü¼şÊı*/
+    /*ï¿½ï¿½Æ·ï¿½Ü¼ï¿½ï¿½ï¿½*/
     var show_number = document.getElementById('show_number');
     function TotalNumber(){
 
         show_number.innerHTML=parseInt(document.getElementById('show_number').innerHTML)+1;
     };
-    /*ÉÌÆ·×Ü¼Û¸ñ*/
+    /*ï¿½ï¿½Æ·ï¿½Ü¼Û¸ï¿½*/
     function TotalPrice(){
 
     };
-    /*½áËã½çÃæ*/
-    /*ÉÌÆ·¹ºÎï³µ¼Ó¼õ*/
+    /*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
+    /*ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï³µï¿½Ó¼ï¿½*/
     function AddSub(){
         var num_jia = document.getElementById("num-jia");
         var num_jian = document.getElementById("num-jian");
@@ -43,14 +53,59 @@ var carShop = (function(){
 
         }
     };
-    /*ÉÌÆ·Ğ¡¼Æ*/
-    function AddSub(){
+    /*ï¿½ï¿½Æ·Ğ¡ï¿½ï¿½*/
+    function add(goodName){
+        var goodName = goodName.toLocaleLowerCase(),
+            existGood = searchGood(goodName);
+        if (existGood) {
+            existGood.quantity ++;
+        } else {
+            var price = getPrice(goodName);
+            if (price !== undefined) {
+                goods.push({name: goodName, quantity: 1, price:price, sum: price * 1});
+            } else {
+                console.error('æ·»åŠ ä¸æˆåŠŸï¼');
+            }
+        }
+        updateSum();
+    }
 
-    };
-    /*Í³¼ÆÉÌÆ·ÏêÇéÊı×é*/
+    /*Í³ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
     function GoodsDetails(){
-        var GoodDeta = [];
-        GoodDeta.push(carDataDe);
-        console.log(GoodDeta.name);
-    };
+        goods.push(carDataDe);
+        console.log(goods.name);
+    }
+
+    // private functions:
+    function updateSum() {
+        var i,
+            n = goods.length,
+            totalAmount = 0,
+            item;
+        for (i = 0; i < n; i++) {
+            item = goods[i];
+            item.sum = item.quantity * item.price;
+            totalAmount += item.sum;
+        }
+        carShopReturn.totalAmount = totalAmount;
+    }
+
+    function searchGood(goodName) {
+        var i,
+            n = goods.length;
+        for (i = 0; i < n; i++) {
+            if (goods[i].name === goodName) {
+                return goods[i];
+            }
+        }
+        return null;
+    }
+
+    function getPrice(goodName) {
+        var price = prices[goodName];
+        if (price === undefined) {
+            console.error("æ‰¾ä¸åˆ°ä»·æ ¼ï¼š " + goodName);
+        }
+        return price;
+    }
 })();
